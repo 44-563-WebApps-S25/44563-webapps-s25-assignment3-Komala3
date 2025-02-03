@@ -49,5 +49,18 @@
             </tr>
         </tbody>
     </table>
+    <hr>
+    <h2>CODE DISPLAY - Debounce function</h2>
+    <p>This code defines a debounce function in TypeScript, which helps limit the rate at which a
+         function can be called. It’s typically used to optimize performance by preventing a function 
+         from being triggered too frequently, such as when handling events like resizing or scrolling.</p>
+<PRE>const debounce = (fn: Function, ms = 300) => {
+	let timeoutId: ReturnType;
+  return function (this: any, ...args: any[]) {
+	  clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};</PRE>
+<p>Snippet source: <a href="https://code.pieces.app/collections/typescript" target="_blank">Click here for the source</a></p>
 </body>
 </html>
